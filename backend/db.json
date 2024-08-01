@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "barcode": 12345,
+      "name": "Notebook Dell",
+      "quantity": 10,
+      "price": 6000
+    },
+    {
+      "id": 2,
+      "barcode": 54321,
+      "name": "Notebook Lenovo",
+      "quantity": 5,
+      "price": 2000
+    },
+    {
+      "id": 3,
+      "barcode": 9876,
+      "name": "Notebook Accer",
+      "quantity": 15,
+      "price": 4500
+    }
+  ]
+}
