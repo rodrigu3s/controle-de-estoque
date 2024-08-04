@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="formulario">
+      <mat-form-field appearance="outline">
+        <mat-label>Código de Barra</mat-label>
+        <input matInput formControlName="code">
+        <mat-error>
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nome do Produto</mat-label>
+        <input matInput formControlName="product">
+        <mat-error>
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Quantidade</mat-label>
+        <input matInput formControlName="quantity">
+        <mat-error>
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Preço</mat-label>
+        <input matInput formControlName="price">
+        <mat-error>
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Cadastrar</button>
+    </form>
+  </div>
+</div>
