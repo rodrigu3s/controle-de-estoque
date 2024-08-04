@@ -4,18 +4,31 @@
 
 .sidenav {
   width: 200px;
+  background-color: #3F51B5;
+  font-weight: 400;
+}
+
+.sidenav a{
+  color: #fff;
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
+  color: #fff;
+}
+
+.mat-toolbar #logo{
+  font-size: 22pt;
+  color: #F0094A;
+  text-shadow:
+  -1px -1px 0 #fff,
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff,
+  1px 1px 0 #fff; /* Cor da borda */
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-.mat-toolbar #logo{
-  color: red;
 }
