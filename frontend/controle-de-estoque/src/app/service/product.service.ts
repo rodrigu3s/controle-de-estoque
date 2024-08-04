@@ -22,6 +22,23 @@ export class ProductService {
   }
 
   save(request: Product){
-    return this.http.post(this.API, request).pipe(take(1)); //take 1 se desinscreve automaticamente do observable
+    //return this.http.post(this.API, request).pipe(take(1)); //take 1 se desinscreve automaticamente do observable
+
+    if(request.id){
+      return this.update(request);
+    }
+    return this.create(request);
+  }
+
+  private create(request: Product){
+    return this.http.post(this.API, request).pipe(take(1));
+  }
+
+  update(request: Product){
+    return this.http.put(`${this.API}/${request.id}`, request).pipe(take(1));
+  }
+
+  remove(id: number){
+    return this.http.delete(`${this.API}/${id}`).pipe(take(1));
   }
 }

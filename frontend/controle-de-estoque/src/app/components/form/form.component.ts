@@ -15,6 +15,7 @@ import { Product } from 'src/app/service/product';
 export class FormComponent implements OnInit{
 
   formulario!: FormGroup;
+  productId!: number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -66,5 +67,7 @@ export class FormComponent implements OnInit{
       price: product.price
     })
   }
+
+
 
 }
