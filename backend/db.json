@@ -2,17 +2,73 @@
   "products": [
     {
       "id": 1,
-      "code": "1234",
-      "product": "Notbook Lenovo ",
-      "quantity": "20",
-      "price": "3070"
+      "code": "1234567891234",
+      "product": "TV",
+      "quantity": "12",
+      "price": "R$ 1.122"
     },
     {
-      "id": 2,
-      "code": "54323",
-      "product": "Notebook Accer i3",
+     "id": 2,
+      "code": "1234567891235",
+      "product": "Geladeira",
       "quantity": "14",
-      "price": "4650"
-    }
+      "price": "R$ 6.122"
+    },
+    {
+      "id": 3,
+      "code": "1234567891236",
+      "product": "Microondas",
+      "quantity": "5",
+      "price": "R$ 850,00"
+    },
+    {
+      "id": 4,
+      "code": "1234567891237",
+      "product": "Máquina de Lavar",
+      "quantity": "7",
+      "price": "R$ 2.300,00"
+    },
+    {
+      "id": 5,
+      "code": "1234567891238",
+      "product": "Fogão",
+      "quantity": "10",
+      "price": "R$ 1.200,00"
+    },
+    {
+      "id": 6,
+      "code": "1234567891239",
+      "product": "Aspirador de Pó",
+      "quantity": "8",
+      "price": "R$ 700,00"
+    },
+    {
+      "id": 7,
+      "code": "1234567891240",
+      "product": "Ventilador",
+      "quantity": "15",
+      "price": "R$ 200,00"
+    },
+    {
+      "id": 8,
+      "code": "1234567891241",
+      "product": "Ar-Condicionado",
+      "quantity": "3",
+      "price": "R$ 2.500,00"
+    },
+    {
+      "id": 9,
+      "code": "1234567891242",
+      "product": "Liquidificador",
+      "quantity": "20",
+      "price": "R$ 150,00"
+    },
+    {
+      "id": 10,
+      "code": "1234567891243",
+      "product": "Cafeteira",
+      "quantity": "12",
+      "price": "R$ 300,00"
+    } 
   ]
 }

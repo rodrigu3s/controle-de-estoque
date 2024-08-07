@@ -12,6 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from "@angular/common/http";
 
+import { NgxMaskModule } from "ngx-mask";
+
 @NgModule({
   declarations: [
     FormComponent
@@ -25,7 +27,8 @@ import { HttpClientModule } from "@angular/common/http";
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forChild()
   ]
 })
 

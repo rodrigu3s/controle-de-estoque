@@ -1,17 +1,3 @@
-// .table-container {
-//   margin: 20px;
-// }
-
-// mat-form-field {
-//   width: 100%;
-//   margin-bottom: 10px;
-// }
-
-// table {
-//   width: 100%;
-// }
-
-
 table {
   border-collapse: collapse;
   width: 100%;
@@ -157,4 +143,14 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
 .btn-delete:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+
+// loading
+
+.loading-spinner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0px;
 }

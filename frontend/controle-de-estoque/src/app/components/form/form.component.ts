@@ -29,7 +29,7 @@ export class FormComponent implements OnInit{
     this.formulario = this.formBuilder.group({
       id: [null],
       code: [null , Validators.required],
-      product: [null, Validators.required],
+      product: [null, [Validators.required, Validators.pattern('^[a-zA-ZÀ-ÿ ]*$'), Validators.maxLength(255)]],
       quantity: [null, Validators.required],
       price: [null, Validators.required]
     })

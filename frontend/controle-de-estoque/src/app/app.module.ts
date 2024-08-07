@@ -12,7 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 
 import { TableComponet } from './components/table/table.component';
 
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,6 +26,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { FormModule } from './components/form/form.module';
 import { HttpClientModule } from '@angular/common/http';
+
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -51,8 +53,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatProgressSpinnerModule,
     FormModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false // ao salvar, vai manter a mascara
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

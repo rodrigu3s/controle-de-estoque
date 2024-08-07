@@ -3,7 +3,7 @@
     <form [formGroup]="formulario">
       <mat-form-field appearance="outline">
         <mat-label>Código de Barra</mat-label>
-        <input matInput formControlName="code">
+        <input matInput formControlName="code" mask="0000000000000">
         <mat-error>
           Name is required
         </mat-error>
@@ -19,7 +19,7 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Quantidade</mat-label>
-        <input matInput formControlName="quantity">
+        <input matInput formControlName="quantity" mask="999">
         <mat-error>
           Name is required
         </mat-error>
@@ -27,7 +27,7 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Preço</mat-label>
-        <input matInput formControlName="price">
+        <input matInput formControlName="price" mask="separator.2" thousandSeparator="." decimalMarker="," prefix="R$ ">
         <mat-error>
           Name is required
         </mat-error>
