@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
+import { PageEvent } from "@angular/material/paginator";
 import { Router } from "@angular/router";
-import { Observable } from "rxjs";
+import { Observable, take } from "rxjs";
+import { Page, PageRequest } from "src/app/_util/pagination";
 import { Product } from "src/app/service/product";
 import { ProductService } from "src/app/service/product.service";
 
@@ -14,7 +16,11 @@ export class TableComponet {
 
   // product!: Product[];
 
-  product$!: Observable<Product[]> // dessa forma o angular fica com a reposabilidade de se inscrever e se desisnscrever
+  //product$!: Observable<Product[]> // dessa forma o angular fica com a reposabilidade de se inscrever e se desisnscrever
+  displayedColumns: string[] = ['id', 'code', 'product', 'quantity', 'price', 'options'];
+  page: Page<Product> = new Page([], 0);
+  pageEvent!: PageEvent;
+  loading = false;
 
   constructor(
     private service: ProductService,
@@ -28,9 +34,37 @@ export class TableComponet {
     this.loadProducts();
   }
 
+  // loadProducts(){
+  //   this.product$ = this.service.getAll();
+  // }
+
   loadProducts(){
-    this.product$ = this.service.getAll();
+    this.loading = true;
+    const queryAdicional = new Map();
+    this.service.getAll(
+      new PageRequest(
+        {
+            pageNumber: this.pageEvent? this.pageEvent.pageIndex: 0,
+            pageSize: this.pageEvent? this.pageEvent.pageSize: 10
+        },
+        queryAdicional
+      )
+    ).pipe(
+      take(1)
+    )
+    .subscribe(
+      page => {
+        this.page = page;
+        this.loading = false;
+      },
+      error =>{
+        this.page = new Page([], 0);
+        this.loading = false;
+      }
+
+    )
   }
+
 
   onEdit(id: number){
     this.router.navigate(['editar', id]);

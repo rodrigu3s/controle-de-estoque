@@ -2,7 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Product } from "./product";
 import { environment } from "src/environments/environment";
-import { delay, take } from "rxjs";
+import { delay, map, take } from "rxjs";
+import { Page, QueryBuilder } from "../_util/pagination";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,12 @@ export class ProductService {
 
   constructor(private http: HttpClient){}
 
-  getAll(){
-    return this.http.get<Product[]>(this.API).pipe(delay(500));
+  getAll(queryBuilder: QueryBuilder){
+    return this.http.get<Product[]>(this.API + `?${queryBuilder.builQueryString()}`, {observe: 'response'})
+    .pipe(
+      map(response => <Page<Product>>Page.fromResponse(response)),
+      delay(500)
+    );
   }
 
   getById(id: number){

@@ -3,12 +3,12 @@
     {
       "id": 1,
       "code": "1234567891234",
-      "product": "TV",
+      "product": "TV Lg",
       "quantity": "12",
       "price": "R$ 1.122"
     },
     {
-     "id": 2,
+      "id": 2,
       "code": "1234567891235",
       "product": "Geladeira",
       "quantity": "14",
@@ -69,6 +69,251 @@
       "product": "Cafeteira",
       "quantity": "12",
       "price": "R$ 300,00"
-    } 
+    },
+    {
+      "id": 11,
+      "code": "1234567891244",
+      "product": "Batedeira",
+      "quantity": "6",
+      "price": "R$ 400,00"
+    },
+    {
+      "id": 12,
+      "code": "1234567891245",
+      "product": "Panela Elétrica",
+      "quantity": "9",
+      "price": "R$ 350,00"
+    },
+    {
+      "id": 13,
+      "code": "1234567891246",
+      "product": "Torradeira",
+      "quantity": "11",
+      "price": "R$ 150,00"
+    },
+    {
+      "id": 14,
+      "code": "1234567891247",
+      "product": "Fritadeira",
+      "quantity": "5",
+      "price": "R$ 500,00"
+    },
+    {
+      "id": 15,
+      "code": "1234567891248",
+      "product": "Sanduicheira",
+      "quantity": "8",
+      "price": "R$ 100,00"
+    },
+    {
+      "id": 16,
+      "code": "1234567891249",
+      "product": "Grill",
+      "quantity": "6",
+      "price": "R$ 250,00"
+    },
+    {
+      "id": 17,
+      "code": "1234567891250",
+      "product": "Forno Elétrico",
+      "quantity": "4",
+      "price": "R$ 900,00"
+    },
+    {
+      "id": 18,
+      "code": "1234567891251",
+      "product": "Secador de Cabelo",
+      "quantity": "14",
+      "price": "R$ 150,00"
+    },
+    {
+      "id": 19,
+      "code": "1234567891252",
+      "product": "Chapinha",
+      "quantity": "7",
+      "price": "R$ 120,00"
+    },
+    {
+      "id": 20,
+      "code": "1234567891253",
+      "product": "Barbeador Elétrico",
+      "quantity": "10",
+      "price": "R$ 200,00"
+    },
+    {
+      "id": 21,
+      "code": "1234567891254",
+      "product": "Aparelho de Som",
+      "quantity": "3",
+      "price": "R$ 1.800,00"
+    },
+    {
+      "id": 22,
+      "code": "1234567891255",
+      "product": "Rádio",
+      "quantity": "18",
+      "price": "R$ 100,00"
+    },
+    {
+      "id": 23,
+      "code": "1234567891256",
+      "product": "Câmera Fotográfica",
+      "quantity": "2",
+      "price": "R$ 3.500,00"
+    },
+    {
+      "id": 24,
+      "code": "1234567891257",
+      "product": "Filmadora",
+      "quantity": "1",
+      "price": "R$ 4.000,00"
+    },
+    {
+      "id": 25,
+      "code": "1234567891258",
+      "product": "Drone",
+      "quantity": "5",
+      "price": "R$ 2.000,00"
+    },
+    {
+      "id": 26,
+      "code": "1234567891259",
+      "product": "Notebook",
+      "quantity": "8",
+      "price": "R$ 3.200,00"
+    },
+    {
+      "id": 27,
+      "code": "1234567891260",
+      "product": "Tablet",
+      "quantity": "10",
+      "price": "R$ 1.500,00"
+    },
+    {
+      "id": 28,
+      "code": "1234567891261",
+      "product": "Smartphone",
+      "quantity": "20",
+      "price": "R$ 2.800,00"
+    },
+    {
+      "id": 29,
+      "code": "1234567891262",
+      "product": "Smartwatch",
+      "quantity": "15",
+      "price": "R$ 1.200,00"
+    },
+    {
+      "id": 30,
+      "code": "1234567891263",
+      "product": "Televisão 4K",
+      "quantity": "3",
+      "price": "R$ 4.500,00"
+    },
+    {
+      "id": 31,
+      "code": "1234567891264",
+      "product": "Home Theater",
+      "quantity": "4",
+      "price": "R$ 2.800,00"
+    },
+    {
+      "id": 32,
+      "code": "1234567891265",
+      "product": "Blu-ray Player",
+      "quantity": "6",
+      "price": "R$ 500,00"
+    },
+    {
+      "id": 33,
+      "code": "1234567891266",
+      "product": "Console de Videogame",
+      "quantity": "10",
+      "price": "R$ 2.500,00"
+    },
+    {
+      "id": 34,
+      "code": "1234567891267",
+      "product": "Jogo de Videogame",
+      "quantity": "30",
+      "price": "R$ 200,00"
+    },
+    {
+      "id": 35,
+      "code": "1234567891268",
+      "product": "Monitor",
+      "quantity": "8",
+      "price": "R$ 1.000,00"
+    },
+    {
+      "id": 36,
+      "code": "1234567891269",
+      "product": "Teclado",
+      "quantity": "15",
+      "price": "R$ 150,00"
+    },
+    {
+      "id": 37,
+      "code": "1234567891270",
+      "product": "Mouse",
+      "quantity": "20",
+      "price": "R$ 100,00"
+    },
+    {
+      "id": 38,
+      "code": "1234567891271",
+      "product": "Impressora",
+      "quantity": "4",
+      "price": "R$ 600,00"
+    },
+    {
+      "id": 39,
+      "code": "1234567891272",
+      "product": "Scanner",
+      "quantity": "3",
+      "price": "R$ 700,00"
+    },
+    {
+      "id": 40,
+      "code": "1234567891273",
+      "product": "Caixa de Som Bluetooth",
+      "quantity": "12",
+      "price": "R$ 300,00"
+    },
+    {
+      "id": 41,
+      "code": "1234567891274",
+      "product": "Fone de Ouvido",
+      "quantity": "25",
+      "price": "R$ 100,00"
+    },
+    {
+      "id": 42,
+      "code": "1234567891275",
+      "product": "Projetor",
+      "quantity": "5",
+      "price": "R$ 1.500,00"
+    },
+    {
+      "id": 43,
+      "code": "1234567891276",
+      "product": "Roteador",
+      "quantity": "7",
+      "price": "R$ 200,00"
+    },
+    {
+      "id": 44,
+      "code": "1234567891277",
+      "product": "Modem",
+      "quantity": "6",
+      "price": "R$ 150,00"
+    },
+    {
+      "id": 45,
+      "code": "1234567891278",
+      "product": "Cabo HDMI",
+      "quantity": "50",
+      "price": "R$ 50,00"
+    }
   ]
 }
