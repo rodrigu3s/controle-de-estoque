@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ProductService } from 'src/app/service/product.service';
 import { ActivatedRoute, Router } from '@angular/router'
 import { Product } from 'src/app/service/product';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-form',
@@ -21,7 +22,8 @@ export class FormComponent implements OnInit{
     private formBuilder: FormBuilder,
     private service: ProductService,
     private router: Router,
-    private route: ActivatedRoute//para editar
+    private route: ActivatedRoute,//para editar
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(){
@@ -52,9 +54,20 @@ export class FormComponent implements OnInit{
       this.service.save(this.formulario.value)
       .subscribe(
         success => {
-          console.log('cadastrado com sucesso');
+          // console.log('cadastrado com sucesso');
+          // this.toastr.success('Cadastrado com Sucesso','Sucesso');
+          if (success.message === 'created') {
+            this.toastr.success('Cadastrado com Sucesso', 'Sucesso');
+          } else if (success.message === 'updated') {
+            this.toastr.success('Alterado com Sucesso', 'Sucesso');
+          }
           this.router.navigate(['/list']) // voltando pra pagina de listagem após adicionar
-      })
+
+      },
+      error => {
+        this.toastr.error('Falha ao cadastrar', 'ERRO');
+      }
+      )
     }
   }
 

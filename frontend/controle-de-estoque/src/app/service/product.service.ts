@@ -30,9 +30,13 @@ export class ProductService {
     //return this.http.post(this.API, request).pipe(take(1)); //take 1 se desinscreve automaticamente do observable
 
     if(request.id){
-      return this.update(request);
+      return this.update(request).pipe(
+        map(result => ({ message: 'updated', result}))
+      );
     }
-    return this.create(request);
+    return this.create(request).pipe(
+      map(result => ({ message: 'created', result }))
+    );
   }
 
   private create(request: Product){

@@ -27,13 +27,19 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Preço</mat-label>
-        <input matInput formControlName="price" mask="separator.2" thousandSeparator="." decimalMarker="," prefix="R$ ">
+        <input matInput formControlName="price" currencyMask
+        [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }">
+
         <mat-error>
           Name is required
         </mat-error>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>
+      <button mat-raised-button color="primary"
+              type="submit" [disabled]="formulario.invalid"
+              (click)="onSubmit()">
+              Submit
+      </button>
     </form>
   </div>
 </div>

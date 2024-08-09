@@ -5,6 +5,9 @@ import { Observable, take } from "rxjs";
 import { Page, PageRequest } from "src/app/_util/pagination";
 import { Product } from "src/app/service/product";
 import { ProductService } from "src/app/service/product.service";
+import { ConfirmationDialogComponent } from "../confirmation-dialog/confirmation-dialog.component";
+import { MatDialog } from "@angular/material/dialog";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector:'app-table',
@@ -24,7 +27,9 @@ export class TableComponet {
 
   constructor(
     private service: ProductService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog,
+    private toastr: ToastrService
   ){}
 
   ngOnInit(){
@@ -70,9 +75,21 @@ export class TableComponet {
     this.router.navigate(['editar', id]);
   }
 
+
+
   onDelete(id: number){
-    this.service.remove(id).subscribe(()=> {
-      this.loadProducts();
+
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      data: 'Tem certeza que deseja remover esse produto?',
+    });
+
+    dialogRef.afterClosed().subscribe((result: boolean) => {
+      if(result){
+        this.service.remove(id).subscribe(()=> {
+          this.toastr.success('Excuido com sucesso', 'Sucesso')
+          this.loadProducts();
+        });
+      }
     });
   }
 }

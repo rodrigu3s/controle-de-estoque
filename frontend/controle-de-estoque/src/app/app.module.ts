@@ -27,7 +27,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { FormModule } from './components/form/form.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+
 import { NgxMaskModule } from 'ngx-mask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
+import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -35,7 +40,8 @@ import { NgxMaskModule } from 'ngx-mask';
     AppComponent,
     SidenavComponent,
     LoginComponent,
-    TableComponet
+    TableComponet,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,10 @@ import { NgxMaskModule } from 'ngx-mask';
     HttpClientModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false // ao salvar, vai manter a mascara
-    })
+    }),
+    CurrencyMaskModule,
+    ToastrModule.forRoot(),
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

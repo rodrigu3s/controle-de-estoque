@@ -14,6 +14,9 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { NgxMaskModule } from "ngx-mask";
 
+import { CurrencyMaskModule } from "ng2-currency-mask";
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     FormComponent
@@ -28,7 +31,9 @@ import { NgxMaskModule } from "ngx-mask";
     MatSelectModule,
     MatInputModule,
     HttpClientModule,
-    NgxMaskModule.forChild()
+    NgxMaskModule.forChild(),
+    CurrencyMaskModule,
+    ToastrModule.forRoot()
   ]
 })
 
